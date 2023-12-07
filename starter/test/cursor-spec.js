@@ -48,15 +48,14 @@ describe("Cursor", function () {
     expect([cursor.row, cursor.col]).to.deep.equal([0, 2]);
   });
 
-  // it('processes left inputs', function () {
+  it("processes left inputs", function () {
+    cursor.left();
+    expect([cursor.row, cursor.col]).to.deep.equal([0, 0]);
 
-  //   cursor.left();
-  //   expect([cursor.row, cursor.col]).to.deep.equal([0, 0]);
+    cursor.right();
+    expect([cursor.row, cursor.col]).to.deep.equal([0, 1]);
 
-  //   cursor.right();
-  //   expect([cursor.row, cursor.col]).to.deep.equal([0, 1]);
-
-  //   cursor.left();
-  //   expect([cursor.row, cursor.col]).to.deep.equal([0, 0]);
-  // });
+    cursor.left();
+    expect([cursor.row, cursor.col]).to.deep.equal([0, 0]);
+  });
 });
